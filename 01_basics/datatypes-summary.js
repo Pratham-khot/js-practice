@@ -29,7 +29,31 @@ const myFunction = function()
     
 }
 
-console.log(typeof bigNumber);
-console.log(typeof bal);
-console.log(typeof myFunction);
-console.log(typeof heros);
+// console.log(typeof bigNumber);
+// console.log(typeof bal);
+// console.log(typeof myFunction);
+// console.log(typeof heros);
+
+// stack and heap memory
+// primitive datatypes are stored in stack and non primitive datatypes are stored in heap memory respectively..
+//stack creates copy of the declared variable & heap  creates reference to the declared variable ..
+
+let myName = "Pratham"
+let anotherName = myName
+
+anotherName="Ronit"
+
+console.log(myName);
+console.log(anotherName);
+
+let userOne={
+    email:"user@dotcom",
+    upi:"user@ybl"
+}
+let userTwo=userOne
+
+userTwo.email="pratham@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
