@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratham Khot</title>
+</head>
+<body>
+    <h1>Learn JavaScript with Pratham</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    
+   
+</body>
+<script>
+    const sayDate=function(str){
+    // console.log("Pratham",Date.now());
+    console.log(str,Date.now());
+   }
+   //it also has third parameter which we can pass in function
+   let intervalId=null
+   document.querySelector('#start').addEventListener('click',function(){
+    if(!intervalId){
+    intervalId=setInterval(sayDate,1000,"hii")
+    }
+   })
+
+   
+
+   document.querySelector('#stop').addEventListener('click',function(){
+    if(intervalId){
+    clearInterval(intervalId)
+    intervalId=null
+    }
+   })
+</script>
+</html>
